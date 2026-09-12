@@ -5,6 +5,7 @@ def instructions():
     green("------------------INSTRUCTIONS------------------")
     green("Press Enter after each line of text.")
     green("Type the number corresponding to your choice.")
+    green("Type 0 to leave.")
     green("------------------------------------------------")
 
 def menu():
@@ -20,7 +21,6 @@ def menu():
 
         if choice == "1":
             instructions()
-            input("> ")
             game()
             menu_active = False
 

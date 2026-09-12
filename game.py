@@ -1,7 +1,7 @@
 from tkinter import messagebox
 from colorama import Fore, Style
 from color import red, yellow
-from ascii import eye
+from animation import eye
 from guide import speak
 
 PLACE = Fore.MAGENTA + "Place" + Style.RESET_ALL
@@ -29,7 +29,6 @@ def game():
     print("But are you REALLY awake?")
     ask()
     eye()
-    ask()
     red("Something is watching you...")
     ask()
     print(f"Hello {name}.")
@@ -66,4 +65,4 @@ def game():
     print("I am here to help you.")
     speak("I am here to help you.")
     ask()
-
+    
