@@ -1,2 +1,4 @@
 # PLACE
-A text-based horror game written in Python.
+A surreal text-based horror game written in Python.
+
+Just for fun. :)
