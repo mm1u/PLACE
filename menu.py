@@ -22,6 +22,7 @@ def menu():
             instructions()
             input("> ")
             game()
+            menu_active = False
 
         elif choice == "0":
             print("Goodbye!")

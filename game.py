@@ -2,6 +2,7 @@ from tkinter import messagebox
 from colorama import Fore, Style
 from color import red, yellow
 from ascii import eye
+from guide import speak
 
 PLACE = Fore.MAGENTA + "Place" + Style.RESET_ALL
 
@@ -32,6 +33,7 @@ def game():
     red("Something is watching you...")
     ask()
     print(f"Hello {name}.")
+    speak(f"Hello {name}.")
     ask()
     yellow(f"{name}: Where am I?")
     ask()
@@ -40,10 +42,13 @@ def game():
     yellow(f"{name}: Who are you?")
     ask()
     print("Too many questions.")
+    speak("Too many questions.")
     ask()
     print(f"This place, let's call it {PLACE}.")
+    speak("This place, let's call it Place.")
     ask()
     print("I will be your guide.")
+    speak("I will be your guide.")
 
     messagebox.showwarning(
     "SYSTEM",
@@ -56,7 +61,9 @@ def game():
     yellow(f"{name}: What was that?")
     ask()
     print("What was what?")
+    speak("What was what?")
     ask()
     print("I am here to help you.")
+    speak("I am here to help you.")
     ask()
 
