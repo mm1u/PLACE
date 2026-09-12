@@ -31,6 +31,8 @@ def game():
     ask()
     red("Something is watching you...")
     ask()
+    print(f"Hello {name}.")
+    ask()
     yellow(f"{name}: Where am I?")
     ask()
     yellow(f"{name}: What is this place?")
@@ -56,4 +58,5 @@ def game():
     print("What was what?")
     ask()
     print("I am here to help you.")
+    ask()
 
