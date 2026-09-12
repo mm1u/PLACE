@@ -8,8 +8,8 @@ def red(text):
 def yellow(text):
     print(Fore.YELLOW + text + Style.RESET_ALL)
 
-def blue(text):
-    print(Fore.BLUE + text + Style.RESET_ALL)
-
 def green(text):
     print(Fore.GREEN + text + Style.RESET_ALL)
+
+def magenta(text):
+    print(Fore.MAGENTA + Style.BRIGHT + text + Style.RESET_ALL)

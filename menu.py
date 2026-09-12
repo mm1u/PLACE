@@ -1,21 +1,36 @@
-from color import blue, green
+from colors import yellow, green, magenta, red
 from game import game
+import pyfiglet
+
+def show_title():
+    game_title = pyfiglet.figlet_format("PLAC E", font ='banner3')
+
+    magenta(game_title)
 
 def instructions():
-    green("------------------INSTRUCTIONS------------------")
-    green("Press Enter after each line of text.")
-    green("Type the number corresponding to your choice.")
-    green("Type 0 to leave.")
-    green("------------------------------------------------")
+    green("───────────────────INSTRUCTIONS───────────────────")
+    green("       Press Enter after each line of text.       ")
+    green("   Type the number corresponding to your choice.  ")
+    green("                 Type 0 to leave.                 ")
+    green("──────────────────────────────────────────────────")
 
 def menu():
+
+    show_title()
+
     menu_active = True
 
     while menu_active:
-        blue("----------------------MENU----------------------")
-        blue("                Type 1 to start                 ")
-        blue("                Type 0 to exit                  ")
-        blue("------------------------------------------------")
+        print()
+        yellow("╔═══════════════════════════════════════════════╗")
+        yellow("║                      MENU                     ║")
+        yellow("║═══════════════════════════════════════════════║")
+        yellow("║                Type 1 to start.               ║")
+        yellow("║                Type 0 to exit.                ║")
+        yellow("╚═══════════════════════════════════════════════╝")
+        print()
+        yellow("          Enter confirms your choice.           ")
+        print()
 
         choice = input("> ")
 
@@ -29,4 +44,4 @@ def menu():
             menu_active = False
 
         else:
-            print("Invalid choice. Please enter 1 or 0.")
+            red("Invalid choice. Please enter 1 or 0.")

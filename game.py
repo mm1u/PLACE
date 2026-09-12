@@ -1,10 +1,11 @@
 from tkinter import messagebox
 from colorama import Fore, Style
-from color import red, yellow
-from animation import eye
+from colors import red, yellow
+from eye import eye_animation
+from door import door_animation
 from guide import speak
 
-PLACE = Fore.MAGENTA + "Place" + Style.RESET_ALL
+PLACE = Fore.MAGENTA + Style.BRIGHT + "Place" + Style.RESET_ALL
 
 def ask(): 
     choice = input("> ") 
@@ -16,6 +17,10 @@ def ask():
     return choice
 
 def game():
+    ask()
+
+    door_animation()
+
     name = input("Enter your name: ")
 
     messagebox.showinfo(
@@ -26,9 +31,7 @@ def game():
     print()
     print("You are awake.")
     ask()
-    print("But are you REALLY awake?")
-    ask()
-    eye()
+    eye_animation()
     red("Something is watching you...")
     ask()
     print(f"Hello {name}.")

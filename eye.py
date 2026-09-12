@@ -1,9 +1,11 @@
 import time
 from colorama import Fore, init
+from playsound import playsound
+import threading
 
 init()
 
-fps = 20
+fps = 16
 
 eyeList = ["""                                                                                
                                                                                 
@@ -2393,7 +2395,12 @@ eyeList = ["""
                                                                                 
 """]
 
-def eye():
+def play_eye_sound():
+    playsound("eyesound.mp3")
+
+def eye_animation():
+    threading.Thread(target=play_eye_sound).start()
+    
     for frame in eyeList:
         print("\033[H\033[J", end="")
         print(Fore.LIGHTRED_EX + frame + Fore.RESET)
