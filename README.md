@@ -3,8 +3,17 @@ A surreal text-based horror game written in Python.
 
 ## Color guide
 
-🟣 Magenta &rarr; PLACE \
-🔵 Cyan &rarr; choices / interaction \
-🟡 Yellow &rarr; player's dialogue \
-🔴 Red &rarr; danger / errors / warnings \
-⚪ White &rarr; narration 
+> [!IMPORTANT]
+> **Magenta** &rarr; PLACE
+
+> [!TIP]
+> **Cyan** &rarr; choices / interaction
+
+> [!WARNING]
+> **Yellow** &rarr; player's dialogue
+
+> [!CAUTION]
+> **Red** &rarr; danger / errors / warnings
+
+> [!NOTE]
+> **White** &rarr; narration 
