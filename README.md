@@ -27,6 +27,7 @@ Not everything you hear is telling you the truth.
 - Colorama
 - PyFiglet
 - Playsound
+- PyTTSX3
 
 ## Color guide
 
