@@ -1,3 +1,9 @@
-from menu import menu, show_title
+from menu import menu
 
-menu()
+
+def main():
+    menu()
+
+
+if __name__ == "__main__":
+    main()

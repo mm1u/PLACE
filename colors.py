@@ -13,3 +13,6 @@ def green(text):
 
 def magenta(text):
     print(Fore.MAGENTA + Style.BRIGHT + text + Style.RESET_ALL)
+
+def cyan(text):
+    print(Fore.CYAN + text + Style.RESET_ALL)

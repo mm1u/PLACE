@@ -1,4 +1,4 @@
-from colors import yellow, green, magenta, red
+from colors import green, magenta, red
 from game import game
 import pyfiglet
 
@@ -22,14 +22,14 @@ def menu():
 
     while menu_active:
         print()
-        yellow("╔═══════════════════════════════════════════════╗")
-        yellow("║                      MENU                     ║")
-        yellow("║═══════════════════════════════════════════════║")
-        yellow("║                Type 1 to start.               ║")
-        yellow("║                Type 0 to exit.                ║")
-        yellow("╚═══════════════════════════════════════════════╝")
+        print("╔═══════════════════════════════════════════════╗")
+        print("║                      MENU                     ║")
+        print("║═══════════════════════════════════════════════║")
+        print("║                Type 1 to start.               ║")
+        print("║                Type 0 to exit.                ║")
+        print("╚═══════════════════════════════════════════════╝")
         print()
-        yellow("          Enter confirms your choice.           ")
+        print("          Enter confirms your choice.           ")
         print()
 
         choice = input("> ")

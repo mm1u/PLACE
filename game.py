@@ -1,20 +1,10 @@
 from tkinter import messagebox
-from colorama import Fore, Style
 from colors import red, yellow
 from eye import eye_animation
 from door import door_animation
 from guide import speak
-
-PLACE = Fore.MAGENTA + Style.BRIGHT + "Place" + Style.RESET_ALL
-
-def ask(): 
-    choice = input("> ") 
-
-    if choice == "0": 
-        print("Goodbye!") 
-        raise SystemExit 
-    
-    return choice
+from utils import ask
+from choices import first_choice
 
 def game():
     ask()
@@ -24,8 +14,8 @@ def game():
     name = input("Enter your name: ")
 
     messagebox.showinfo(
-    "SYSTEM",
-    f"We know you, {name}."
+        "SYSTEM",
+        f"We know you, {name}."
     )
 
     print()
@@ -37,27 +27,14 @@ def game():
     print(f"Hello {name}.")
     speak(f"Hello {name}.")
     ask()
-    yellow(f"{name}: Where am I?")
+    first_choice(name)
     ask()
-    yellow(f"{name}: What is this place?")
-    ask()
-    yellow(f"{name}: Who are you?")
-    ask()
-    print("Too many questions.")
-    speak("Too many questions.")
-    ask()
-    print(f"This place, let's call it {PLACE}.")
-    speak("This place, let's call it Place.")
-    ask()
-    print("I will be your guide.")
-    speak("I will be your guide.")
 
     messagebox.showwarning(
-    "SYSTEM",
-    "Don't listen to it."
+        "SYSTEM",
+        "Don't listen to it."
     )
 
-    ask()
     yellow(f"{name}: ???")
     ask()
     yellow(f"{name}: What was that?")
