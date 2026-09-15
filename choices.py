@@ -5,6 +5,23 @@ from utils import ask
 
 PLACE = Fore.MAGENTA + Style.BRIGHT + "Place" + Style.RESET_ALL
 
+def enter():
+    print()
+    cyan("Enter?")
+    print()
+
+    cyan("1. Yes")
+    cyan("2. Yes")
+    print()
+
+    answer = input("> ")
+
+    # validates the choice
+    while answer != "1" and answer != "2":
+        red("Invalid choice.")
+        answer = input("> ")
+
+
 def first_choice(name):
     # first question
     print()

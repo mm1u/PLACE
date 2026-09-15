@@ -4,12 +4,14 @@ from eye import eye_animation
 from door import door_animation
 from guide import speak
 from utils import ask
-from choices import first_choice
+from choices import enter, first_choice
 
 
 # runs the main sequence of the game
 def game():
     ask()
+    
+    enter()
 
     door_animation()
 
