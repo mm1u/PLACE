@@ -1,4 +1,6 @@
 from tkinter import messagebox
+import os
+import getpass
 from colors import red, yellow
 from eye import eye_animation
 from door import door_animation
@@ -7,19 +9,27 @@ from utils import ask
 from choices import enter, first_choice
 
 
+# gets the username of the current computer user
+def get_computer_username():
+    try:
+        return getpass.getuser()
+    except Exception:
+        return os.environ.get("USER") or os.environ.get("USERNAME") or "Player"
+
+
 # runs the main sequence of the game
 def game():
     ask()
-    
+
     enter()
 
     door_animation()
 
-    name = input("Enter your name: ")
+    pc_username = get_computer_username()
 
     messagebox.showinfo(
         "SYSTEM",
-        f"We know you, {name}."
+        f"We know you, {pc_username}."
     )
 
     print()
@@ -28,10 +38,10 @@ def game():
     eye_animation()
     red("Something is watching you...")
     ask()
-    print(f"Hello {name}.")
-    speak(f"Hello {name}.")
+    print(f"Hello {pc_username}.")
+    speak(f"Hello {pc_username}.")
     ask()
-    first_choice(name)
+    first_choice(pc_username)
     ask()
 
     messagebox.showwarning(
@@ -39,9 +49,9 @@ def game():
         "Don't listen to it."
     )
 
-    yellow(f"{name}: ???")
+    yellow(f"{pc_username}: ???")
     ask()
-    yellow(f"{name}: What was that?")
+    yellow(f"{pc_username}: What was that?")
     ask()
     print("What was what?")
     speak("What was what?")
