@@ -10,7 +10,7 @@ def error(text):
     print(Fore.RED + text + Style.RESET_ALL)
 
 def red(text):
-    type_text(Fore.RED + text + Style.RESET_ALL)
+    type_text(Fore.RED + Style.BRIGHT + text + Style.RESET_ALL)
 
 def yellow(text):
     print(Fore.YELLOW + text + Style.RESET_ALL)

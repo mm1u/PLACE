@@ -22,93 +22,64 @@ def enter():
         answer = input("> ")
 
 
+questions = {
+    "1": {
+        "question": "What is this place?",
+        "response": "This place, let's call it Place."
+    },
+    "2": {
+        "question": "Who are you?",
+        "response": "I will be your guide."
+    },
+    "3": {
+        "question": "How do you know my name?",
+        "response": "ERROR: RESPONSE UNAVAILABLE."
+    }
+}
+
+
 def first_choice(name):
-    # first question
-    print()
-    cyan("What do you want to ask?")
-    print()
+    asked = []
+    asking = True
 
-    cyan("1. What is this place?")
-    cyan("2. Who are you?")
-    print()
-
-    # validate the first choice
-    first_answer = input("> ")
-
-    while first_answer != "1" and first_answer != "2":
-        error("Invalid choice.")
-        first_answer = input("> ")
-
-    # player asks about the place
-    if first_answer == "1":
-        yellow(f"{name}: What is this place?")
-        ask()
-
-        print(f"This place, let's call it {PLACE}.")
-        speak("This place, let's call it Place.")
-        ask()
-
-        # second question
+    while asking and len(asked) < 3:
         print()
-        cyan("What else would you like to ask?")
+        cyan("What do you want to ask?")
         print()
 
-        cyan("1. Who are you?")
-        cyan("2. Nothing")
+        for number, question in questions.items():
+            if number not in asked:
+                cyan(f"{number}. {question['question']}")
+
+        print()
+        cyan("0. Nothing")
         print()
 
-        # validate the second choice
-        second_answer = input("> ")
+        answer = input("> ")
 
-        while second_answer != "1" and second_answer != "2":
+        # validate the choice
+        while answer != "0" and answer not in questions:
             error("Invalid choice.")
-            second_answer = input("> ")
-
-        # player asks who the Guide is
-        if second_answer == "1":
-            yellow(f"{name}: Who are you?")
-            ask()
-
-            print("I will be your guide.")
-            speak("I will be your guide.")
+            answer = input("> ")
 
         # player doesn't want to ask anything else
-        elif second_answer == "2":
+        if answer == "0":
             yellow(f"{name}: ...")
+            asking = False
 
-    # player asks who the Guide is
-    elif first_answer == "2":
-        yellow(f"{name}: Who are you?")
-        ask()
+        else:
+            asked.append(answer)
 
-        print("I will be your guide.")
-        speak("I will be your guide.")
-        ask()
-
-        # second question
-        print()
-        cyan("What else would you like to ask?")
-        print()
-
-        cyan("1. What is this place?")
-        cyan("2. Nothing")
-        print()
-
-        # validate the second choice
-        second_answer = input("> ")
-
-        while second_answer != "1" and second_answer != "2":
-            error("Invalid choice.")
-            second_answer = input("> ")
-
-        # player asks about the place
-        if second_answer == "1":
-            yellow(f"{name}: What is this place?")
+            yellow(f"{name}: {questions[answer]['question']}")
             ask()
 
-            print(f"This place, let's call it {PLACE}.")
-            speak("This place, let's call it Place.")
+            if answer == "1":
+                print(questions[answer]["response"])
+                speak(questions[answer]["response"])
 
-        # player doesn't want to ask anything else
-        elif second_answer == "2":
-            yellow(f"{name}: ...")
+            elif answer == "2":
+                print(questions[answer]["response"])
+                speak(questions[answer]["response"])
+
+            elif answer == "3":
+                error(questions[answer]["response"])
