@@ -1,4 +1,4 @@
-from colors import green, magenta, red
+from colors import green, magenta, error
 from game import game
 import pyfiglet
 
@@ -50,4 +50,4 @@ def menu():
             menu_active = False
 
         else:
-            red("Invalid choice. Please enter 1 or 0.")
+            error("Invalid choice. Please enter 1 or 0.")

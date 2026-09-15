@@ -1,12 +1,16 @@
 from colorama import Fore, Style, init
-
-# custom color functions for terminal output
+from utils import type_text
 
 init()
 
 
-def red(text):
+# custom color functions for terminal output
+
+def error(text):
     print(Fore.RED + text + Style.RESET_ALL)
+
+def red(text):
+    type_text(Fore.RED + text + Style.RESET_ALL)
 
 def yellow(text):
     print(Fore.YELLOW + text + Style.RESET_ALL)

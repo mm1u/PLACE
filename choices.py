@@ -1,5 +1,5 @@
 from colorama import Fore, Style
-from colors import yellow, cyan, red
+from colors import yellow, cyan, error
 from guide import speak
 from utils import ask
 
@@ -18,7 +18,7 @@ def enter():
 
     # validates the choice
     while answer != "1" and answer != "2":
-        red("Invalid choice.")
+        error("Invalid choice.")
         answer = input("> ")
 
 
@@ -36,7 +36,7 @@ def first_choice(name):
     first_answer = input("> ")
 
     while first_answer != "1" and first_answer != "2":
-        red("Invalid choice.")
+        error("Invalid choice.")
         first_answer = input("> ")
 
     # player asks about the place
@@ -61,7 +61,7 @@ def first_choice(name):
         second_answer = input("> ")
 
         while second_answer != "1" and second_answer != "2":
-            red("Invalid choice.")
+            error("Invalid choice.")
             second_answer = input("> ")
 
         # player asks who the Guide is
@@ -98,7 +98,7 @@ def first_choice(name):
         second_answer = input("> ")
 
         while second_answer != "1" and second_answer != "2":
-            red("Invalid choice.")
+            error("Invalid choice.")
             second_answer = input("> ")
 
         # player asks about the place
