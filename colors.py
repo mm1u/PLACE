@@ -1,6 +1,8 @@
 from colorama import Fore, Style, init
 
+# custom color functions for terminal output
 init()
+
 
 def red(text):
     print(Fore.RED + text + Style.RESET_ALL)

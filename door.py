@@ -449,9 +449,13 @@ doorList = ["""
                                                                                 
 """]
 
+
+# plays the door sound separately from the animation
 def play_door_sound():
     playsound("doorsound.mp3")
 
+
+# displays the door animation frame by frame
 def door_animation():
     threading.Thread(target=play_door_sound).start()
 

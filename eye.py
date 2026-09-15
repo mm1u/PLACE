@@ -2395,9 +2395,13 @@ eyeList = ["""
                                                                                 
 """]
 
+
+# plays the eye sound separately from the animation
 def play_eye_sound():
     playsound("eyesound.mp3")
 
+
+# displays the eye animation frame by frame
 def eye_animation():
     threading.Thread(target=play_eye_sound).start()
     

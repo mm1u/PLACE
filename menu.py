@@ -2,11 +2,14 @@ from colors import green, magenta, red
 from game import game
 import pyfiglet
 
+# displays the PLACE title
 def show_title():
     game_title = pyfiglet.figlet_format("PLAC E", font ='banner3')
 
     magenta(game_title)
 
+
+# displays the game instructions
 def instructions():
     green("───────────────────INSTRUCTIONS───────────────────")
     green("       Press Enter after each line of text.       ")
@@ -14,6 +17,8 @@ def instructions():
     green("                 Type 0 to leave.                 ")
     green("──────────────────────────────────────────────────")
 
+
+# keeps the menu active until the player starts or exits the game
 def menu():
 
     show_title()

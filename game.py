@@ -6,6 +6,8 @@ from guide import speak
 from utils import ask
 from choices import first_choice
 
+
+# runs the main sequence of the game
 def game():
     ask()
 
