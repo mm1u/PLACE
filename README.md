@@ -1,10 +1,12 @@
 # PLACE
-A surreal text-based horror game written in Python.
+
+A surreal psychological horror game currently prototyped in Python,
+with plans for a future 3D remake in Godot.
 
 ## About
 
-PLACE is a branching text-based horror game where the player
-finds themselves somewhere they don't recognize.
+PLACE is a text-based game where the player finds themselves
+somewhere they don't recognize.
 
 Question the Guide. Make choices. Pay attention.
 
