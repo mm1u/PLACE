@@ -1,6 +1,7 @@
 from colorama import Fore, Style, init
 
 # custom color functions for terminal output
+
 init()
 
 

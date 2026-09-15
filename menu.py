@@ -2,6 +2,7 @@ from colors import green, magenta, red
 from game import game
 import pyfiglet
 
+
 # displays the PLACE title
 def show_title():
     game_title = pyfiglet.figlet_format("PLAC E", font ='banner3')
